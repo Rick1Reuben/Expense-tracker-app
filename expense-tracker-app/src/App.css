@@ -1,0 +1,466 @@
+/* Global Styles for the Expense Tracker App */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4faff; /* Very light blue-ish white for better contrast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #fff; /* White content background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  color: #2e7d32; /* A nice dark green */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+nav {
+  background-color: #e8f5e9; /* Light green navigation background */
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #dcedc8; /* Slightly darker light green on hover */
+}
+
+/* Basic form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9fbe7; /* Another light green shade for form background */
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"],
+form select,
+.react-datepicker-wrapper input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #4caf50; /* A brighter green for buttons */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #388e3c;
+}
+
+/* Expense list styling */
+h3 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li button {
+  background-color: #f44336; /* Red for delete button */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #d32f2f;
+}
+
+/* Search styles */
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-container label {
+  font-weight: bold;
+}
+
+.search-container input[type="text"],
+.search-container select,
+.react-datepicker-wrapper input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-container button {
+  background-color: #2196f3; /* Blue for search/reset buttons */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #1976d2;
+}
+
+/* Profile Page Styles */
+.profile-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile-container h2 {
+  color: #007bff; /* Primary blue for profile heading */
+  margin-bottom: 25px;
+}
+
+.profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  color: #555;
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.profile-info strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-edit-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-edit-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-edit-form label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profile-edit-form input[type="text"],
+.profile-edit-form input[type="email"],
+.profile-edit-form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.profile-edit-form button {
+  background-color: #007bff; /* Primary blue for profile buttons */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-edit-form button:hover {
+  background-color: #0056b3;
+}
+
+.profile-message {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.profile-success {
+  color: #28a745; /* Success green */
+}
+
+.profile-error {
+  color: #dc3545; /* Danger red */
+}
+
+/* Graph Page Styles (Combined and Slightly Adjusted) */
+.graph-page-container {
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 95%;
+  max-width: 1200px;
+}
+
+.graph-page-container h2 {
+  color: #007bff; /* Primary blue */
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.graph-controls {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e9ecef; /* Light grey control background */
+  border-radius: 6px;
+}
+
+.graph-controls label {
+  font-weight: bold;
+  color: #495057; /* Dark grey label text */
+}
+
+.graph-controls select,
+.graph-controls .react-datepicker-wrapper input {
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light grey border */
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.graph-controls button {
+  background-color: #28a745; /* Success green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.graph-controls button:hover {
+  background-color: #218838;
+}
+
+.graph-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.graph-container h3 {
+  color: #17a2b8; /* Info teal */
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.graph-container canvas {
+  width: 100% !important; /* Ensure responsiveness */
+  height: auto !important;
+  max-height: 400px; /* Limit height if needed */
+}
+
+.initial-amount-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.initial-amount-input label {
+  font-weight: bold;
+  color: #495057;
+}
+
+.initial-amount-input input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 150px;
+}
+
+.no-data-message,
+.loading-message,
+.error-message {
+  color: #dc3545; /* Danger red */
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loading-message {
+  color: #ffc107; /* Warning yellow */
+}
+
+.error-message {
+  font-weight: bold;
+}
+
+/* Responsive adjustments (global and specific) */
+@media (max-width: 768px) {
+  .app {
+      width: 95%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 15px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  nav li:last-child {
+      margin-bottom: 0;
+  }
+
+  form {
+      padding: 10px;
+  }
+
+  .search-container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .search-container > * {
+      margin-bottom: 10px;
+  }
+
+  .search-container > *:last-child {
+      margin-bottom: 0;
+  }
+
+  .graph-controls {
+      grid-template-columns: auto; /* Stack controls */
+  }
+
+  .graph-controls label,
+  .graph-controls select,
+  .graph-controls .react-datepicker-wrapper input,
+  .graph-controls button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .graph-controls button {
+      margin-bottom: 0;
+  }
+
+  .profile-container {
+      width: 95%;
+      padding: 15px;
+  }
+}
